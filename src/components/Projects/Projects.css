@@ -1,0 +1,42 @@
+.project__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  border-color: red;
+  gap: 1rem;
+}
+
+.project {
+  background-color: rgb(151, 59, 216);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.project:hover {
+  /* background-color: deeppink; */
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: bisque;
+}
+
+.project-stack__item {
+  list-style-type: none;
+  background-color: rgb(116, 22, 217);
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 2px;
+  margin: 0.5em;
+  padding: 7px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #fff;
+}
