@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import ProjectContainer from "../ProjectContainer/ProjectContainer";
 import "./Projects.css";
 
 const Projects = () => {
@@ -29,37 +30,15 @@ const Projects = () => {
     },
   ];
   return (
-    <Fragment>
-      <h2>Projects</h2>
-      <div className="project__grid">
-        <div className="project">
-          <h3>{projects[0].name}</h3>
-          <p className="project__description">{projects[0].description}</p>
+    <div className="grid-flow-row">
+      <h1 className="text-3xl text-center my-8 text-sky-100">Projects</h1>
 
-          {/* {<ul className="project-stack">
-                        {projects[0].stack.map(item=>{
-                            <li className="project-stack__item">{item}</li>
-                        })}
-                        </ul>} */}
-
-          {/* {
-                        <ul>
-                           {projects[0].stack.map(item=>{
-                            <li>{item}</li>
-                           })} 
-                        </ul>
-                    } */}
-
-          <ul className="project-stack">
-            {projects[0].stack.map((item) => (
-              <li  className="project-stack__item">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="flex flex-row justify-evenly">
+        {projects.map((project) => {
+          return <ProjectContainer project={project} />;
+        })}
       </div>
-    </Fragment>
+    </div>
   );
 };
 
