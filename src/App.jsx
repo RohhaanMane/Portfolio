@@ -10,7 +10,7 @@ function App() {
     <div className='bg-slate-800 h-screen'>
     <Navbar />
 
-    {/* <Projects /> */}
+    <Projects />
     </div>
   )
 }
