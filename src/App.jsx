@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
     <Navbar />
-
-    <Projects />
+{/* 
+    <Projects /> */}
     </div>
   )
 }

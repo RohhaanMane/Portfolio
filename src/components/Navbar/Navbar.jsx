@@ -9,21 +9,21 @@ const Navbar =()=>{
         {name:"contact",link:"/"},
     ]
 
-    const navItems = navLinks.map(item => <li key={item.link} className=" text-xl md:px-3  md:my-0 my-7 border-2 border-rose-500 "> <a href={item.link} className= "hover:text-gray-500 ">{item.name}</a></li>)
+    const navItems = navLinks.map(item => <li key={item.link} className=" text-xl md:px-3  md:my-0 my-7 "> <a href={item.link} className= "hover:text-gray-500 ">{item.name}</a></li>)
 
     const [open, setOpen] = useState(false);
 
     return(
     <>
-        <nav className="w-full fixed  shadow-sm ">
-            <div className=" max-w-6xl mx-auto md:flex md:items-center md:justify-between py-5 bg-white" >
+        <nav className="w-full">
+            <div className=" md:max-w-[80%] mx-auto md:flex md:items-center md:justify-between py-5" >
                 <div className="font-bold items-center text-2xl cursor-pointer flex ">
                     <img  src={logo} alt="logo" className="h-10 mx-5 "></img> 
                 </div>
                 <div onClick={()=>setOpen(!open)} className="text-3xl  absolute right-8 top-5 cursor-pointer md:hidden">
                 <ion-icon  className="transition-all duration-500 ease-in-out" name={open? "close" : "menu"}></ion-icon>
                 </div>
-                <div className={`md:flex items-center uppercase md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] md:right-0 w-full md:w-auto md:pl-0 pl-5 transition-all  backdrop-blur-sm duration-500  ease-in-out ${open? "top-20 opacity-100":"top-[-490px] md:opacity-100 opacity-0"} `}>
+                <div className={`md:flex items-center uppercase md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] md:right-0  right-0 md:w-auto md:pl-0 pr-10 transition-all  backdrop-blur-sm duration-500  ease-in-out ${open? "top-15 opacity-100":"top-[-490px] md:opacity-100 opacity-0"} `}>
                     <ul className="md:flex md:items-center ">
                         {navItems}
                     </ul>
@@ -42,6 +42,9 @@ const Navbar =()=>{
             </div>
            
         </nav>
+        <section className="">
+
+        </section>
     </>
     )
 }
