@@ -30,7 +30,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="grid-flow-row">
+    <div>
       <h1 className="text-3xl text-center my-8 text-sky-100">Projects</h1>
 
       <div className="flex flex-row justify-evenly">
