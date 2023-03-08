@@ -32,8 +32,8 @@ const Projects = () => {
   return (
     // <h1>Hola</h1>
     <div>
-      <h1 className="text-2xl font-bold font-sans text-black">Projects</h1>
-      <div className="flex flex-wrap border-amber-400 p-3 justify-center">
+      <h1 className="text-2xl font-bold font-sans text-[#444444] text-center mb-2">Projects</h1>
+      <div className="flex flex-wrap m-2 justify-center">
         {
           projects.map(project=>{
             return <ProjectContainer project={project} />
