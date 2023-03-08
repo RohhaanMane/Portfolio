@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
-import "./Projects.css";
+// import "./Projects.css";
 
 const Projects = () => {
   const projects = [
@@ -30,16 +30,31 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="grid-flow-row">
-      <h1 className="text-3xl text-center my-8 text-sky-100">Projects</h1>
-
-      <div className="flex flex-row justify-evenly">
-        {projects.map((project) => {
-          return <ProjectContainer project={project} />;
-        })}
+    <div>
+      <h1 className="text-2xl font-bold font-sans text-white">Projects</h1>
+      <div className="flex flex-wrap border-amber-400 p-3 justify-center">
+        {
+          projects.map(project=>{
+            return <ProjectContainer project={project} />
+          })
+        }
       </div>
     </div>
   );
 };
 
 export default Projects;
+
+{
+  /* <>
+      <div className="grid-flow-row">
+        <h1 className="text-3xl text-center my-8 text-sky-100">Projects</h1>
+
+        <div className="flex justify-around justify-items-center">
+          {projects.map((project) => {
+            return <ProjectContainer project={project} />;
+          })}
+        </div>
+      </div>
+    </> */
+}
