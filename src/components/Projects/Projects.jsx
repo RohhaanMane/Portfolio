@@ -33,11 +33,11 @@ const Projects = () => {
   return (
     // <h1>Hola</h1>
     <div>
-      <h1 className="text-3xl font-bold font-sans text-[#444444] text-center mb-5">PROJECTS</h1>
+      <h1 className="text-3xl font-bold  text-[#444444] text-center mt-20 mb-5">PROJECTS</h1>
       <div className="flex flex-wrap m-2 justify-center">
         {
           projects.map(project=>{
-            return <ProjectContainer project={project} />
+            return <ProjectContainer key={project.name} project={project} />
           })
         }
       </div>

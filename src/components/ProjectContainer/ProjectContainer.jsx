@@ -2,10 +2,10 @@ import React, { Fragment } from "react";
 
 const ProjectContainer = (props) => {
   return (
-    <div className="card w-96 border bg-base-100 shadow-xl m-2 p-8 transition ease-in-out duration-200 transform hover:-translate-y-2">
-      <h3 className="text-2xl font-bold text-center text-[#444444]">
+    <div className="card w-96 border rounded bg-base-100 shadow-xl m-2 p-8 transition ease-in-out duration-200 transform hover:-translate-y-2">
+      <h2 className="text-2xl font-bold text-center text-[#444444]">
         {props.project.name}
-      </h3>
+      </h2>
       <p className="pt-3 text-[#555555] text-center">
         {props.project.description}
       </p>
