@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "./assets/minesh-logo.svg"
 const Navbar =()=>{
 
@@ -9,7 +9,7 @@ const Navbar =()=>{
         {name:"contact",link:"/"},
     ]
 
-    const navItems = navLinks.map(item => <li key={item.link} className=" text-xl md:px-3  md:my-0 my-7 "> <a href={item.link} className= "hover:text-gray-500 ">{item.name}</a></li>)
+    const navItems = navLinks.map(item => <li key={item.link+item.name} className=" text-xl md:px-3  md:my-0 my-7 "> <a href={item.link} className= "hover:text-gray-500 ">{item.name}</a></li>)
 
     const [open, setOpen] = useState(false);
 

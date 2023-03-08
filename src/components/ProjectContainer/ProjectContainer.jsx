@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 const ProjectContainer = (props) => {
   return (
+    // <h1>HOla from container</h1>
     <div className="card w-96 bg-base-100 shadow-xl ml-1.5 mr-1.5 h-60">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-black">Project</h3>
       <div className="card-body">

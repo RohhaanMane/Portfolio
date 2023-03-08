@@ -30,8 +30,9 @@ const Projects = () => {
     },
   ];
   return (
+    // <h1>Hola</h1>
     <div>
-      <h1 className="text-2xl font-bold font-sans text-white">Projects</h1>
+      <h1 className="text-2xl font-bold font-sans text-black">Projects</h1>
       <div className="flex flex-wrap border-amber-400 p-3 justify-center">
         {
           projects.map(project=>{
