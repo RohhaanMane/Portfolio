@@ -14,7 +14,7 @@ const ProjectContainer = (props) => {
           <li className="p-2 text-[0.8rem] text-[#444444] font-medium">{item}</li>
         ))}
       </ul>
-      <div className="flex justify-center">
+      <div className="flex justify-center gap-2">
         <ion-icon name="logo-github" size="large"></ion-icon>
         <ion-icon name="eye-sharp" size="large"></ion-icon>
       </div>
