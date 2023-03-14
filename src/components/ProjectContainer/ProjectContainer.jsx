@@ -1,18 +1,21 @@
-import React, { Fragment } from "react";
+import React, { useContext } from "react";
+import PortfolioContext from "../../context/portfolio-context";
 
 const ProjectContainer = (props) => {
+  const themeCtx = useContext(PortfolioContext);
   return (
-    <div className="card w-96 border rounded bg-base-100 shadow-xl m-2 p-8 transition ease-in-out duration-200 transform hover:-translate-y-2">
-      <h2 className="text-2xl font-bold text-center text-[#444444]">
+    <div className={`card w-96 border rounded shadow-xl m-2 p-8 bg-base-100 transition ease-in-out duration-200 transform hover:-translate-y-2 ${themeCtx.theme ? "bg-[#23283e]" : ''}`}>
+      <h2 className={`text-2xl font-bold text-center text-[#444444] ${themeCtx.theme ? "text-[#cdcdff]" : ''}`}>
         {props.project.name}
       </h2>
-      <p className="pt-3 text-[#555555] text-center">
+      <p className={`pt-3 text-[#555555] text-center ${themeCtx.theme ? "text-[#bdbddd]" : ''}`}>
         {props.project.description}
       </p>
       <ul className="flex flwx-row justify-center my-5">
         {props.project.stack.map((item) => (
-          <li className="p-2 text-[0.8rem] text-[#444444] font-medium">{item}</li>
+          <li className={`p-2 text-[0.8rem] text-[#444444] font-medium ${themeCtx.theme ? "text-[#cdcdff]" : ''}`}>{item}</li>
         ))}
+        
       </ul>
       <div className="flex justify-center gap-2">
         <ion-icon name="logo-github" size="large"></ion-icon>

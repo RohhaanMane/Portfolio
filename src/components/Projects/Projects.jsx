@@ -1,8 +1,12 @@
-import React, { Fragment } from "react";
+import React, { useContext } from "react";
 import ProjectContainer from "../ProjectContainer/ProjectContainer";
+import PortfolioContext from "../../context/portfolio-context";
 // import "./Projects.css";
 
 const Projects = () => {
+
+  const themeCtx = useContext(PortfolioContext);
+
   const projects = [
     {
       name: "Project 1",
@@ -33,7 +37,7 @@ const Projects = () => {
   return (
     // <h1>Hola</h1>
     <div>
-      <h1 className="text-3xl font-bold  text-[#444444] text-center mt-20 mb-5">PROJECTS</h1>
+      <h1 className={`text-3xl font-bold  text-center mt-20 mb-5 text-[#444444] ${themeCtx.theme ? 'text-[#cdcdff]' : ''}`}>PROJECTS</h1>
       <div className="flex flex-wrap m-2 justify-center">
         {
           projects.map(project=>{
